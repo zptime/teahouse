@@ -6,10 +6,11 @@
     "pages/news/news"
   ],
   "window": {
-    "navigationBarTextStyle": "black",
-    "navigationStyle": "custom"
+    "navigationBarTitleText": "时光茶馆",
+    "backgroundColor": "#000",
+    "navigationBarTextStyle": "white",
+    "navigationStyle": "default"
   },
-  "renderer": "skyline",
   "rendererOptions": {
     "skyline": {
       "defaultDisplayBlock": true,
