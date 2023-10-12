@@ -1,0 +1,13 @@
+/* components/m-header/m-header.wxss */
+.m-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 120rpx;
+  padding: 0 30rpx;
+  border-bottom: 1px solid var(--themeColor);
+
+  .logo {
+    width: 240rpx;
+  }
+}
