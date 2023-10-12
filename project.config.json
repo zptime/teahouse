@@ -30,16 +30,22 @@
     "useApiHook": true,
     "useApiHostProcess": true,
     "showShadowRootInWxmlPanel": true,
-    "packNpmManually": false,
+    "packNpmManually": true,
+    "packNpmRelationList": [
+      {
+        "packageJsonPath": "./package.json",
+        "miniprogramNpmDistDir": "./"
+      }
+    ],
     "enableEngineNative": false,
-    "packNpmRelationList": [],
     "minifyWXSS": true,
     "showES6CompileOption": false,
     "babelSetting": {
       "ignore": [],
       "disablePlugins": [],
       "outputPath": ""
-    }
+    },
+    "minifyWXML": false
   },
   "compileType": "miniprogram",
   "libVersion": "3.1.2",
