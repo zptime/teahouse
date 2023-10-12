@@ -1,7 +1,5 @@
 <!--components/m-header/m-header.wxml-->
 <view class="m-header">
   <image class="logo" src="/static/images/logo.jpg" mode="widthFix"></image>
-  <view class="search">
-    <text>搜索按钮</text>
-  </view>
+  <van-icon class="search" name="search" />
 </view>
