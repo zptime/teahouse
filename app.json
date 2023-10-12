@@ -1,7 +1,9 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/classify/classify",
+    "pages/news/news"
   ],
   "window": {
     "navigationBarTextStyle": "black",
@@ -18,6 +20,8 @@
     }
   },
   "tabBar": {
+    "color": "#4C4D4E",
+    "selectedColor": "#BDA066",
     "list": [{
         "text": "首页",
         "pagePath": "pages/index/index",
@@ -26,9 +30,15 @@
       },
       {
         "text": "分类",
-        "pagePath": "pages/logs/logs",
-        "iconPath": "/static/images/file-text.png",
-        "selectedIconPath": "/static/images/file-text-fill.png"
+        "pagePath": "pages/classify/classify",
+        "iconPath": "/static/images/all.png",
+        "selectedIconPath": "/static/images/all-fill.png"
+      },
+      {
+        "text": "新闻",
+        "pagePath": "pages/news/news",
+        "iconPath": "/static/images/news.png",
+        "selectedIconPath": "/static/images/news-fill.png"
       }
     ]
   },
