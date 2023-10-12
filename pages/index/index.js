@@ -1,6 +1,9 @@
 // pages/index/index.js
-Page({
+import {
+  getNavList
+} from "../../service/api"
 
+Page({
   /**
    * 页面的初始数据
    */
@@ -10,14 +13,23 @@ Page({
       '/static/images/banner1.jpg',
       '/static/images/banner2.jpg',
       '/static/images/banner3.jpg'
-    ]
+    ],
+    navList: []
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
+    this.getNavData();
+  },
 
+  getNavData() {
+    getNavList().then(res => {
+      this.setData({
+        navList: res.data
+      })
+    })
   },
 
   /**

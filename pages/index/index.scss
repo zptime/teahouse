@@ -2,11 +2,40 @@
 .banners {
   margin-top: 30rpx;
   height: 460rpx;
+
   swiper-item {
     image {
       width: 690rpx;
       height: 460rpx;
       border-radius: 30rpx;
+    }
+  }
+}
+
+.scrolls {
+  margin: 60rpx 30rpx;
+  height: 160rpx;
+  overflow: hidden;
+  scroll-view {
+    display: flex;
+    flex-direction: row;
+    white-space: nowrap;
+  }
+  .item {
+    padding: 0 23rpx;
+    .img {
+      width: 100rpx;
+      height: 100rpx;
+    }
+    .desc {
+      color: var(--globalColor);
+      font-size: 32rpx;
+    }
+    &:first-child {
+      padding-left: 0;
+    }
+    &:last-child {
+      padding-right: 0;
     }
   }
 }

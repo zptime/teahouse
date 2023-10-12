@@ -8,3 +8,13 @@
     <image src="{{item}}"></image>
   </swiper-item>
 </swiper>
+
+<!-- 滚动条 -->
+<view class="scrolls">
+  <scroll-view scroll-x enable-flex>
+    <view class="item" wx:for="{{navList}}" wx:key="_id">
+      <image src="{{item.icon}}" class="img"></image>
+      <view class="desc">{{item.classname}}</view>
+    </view>
+  </scroll-view>
+</view>
