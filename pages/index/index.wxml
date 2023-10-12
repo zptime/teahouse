@@ -1,4 +1,10 @@
 <!--pages/index/index.wxml-->
-<view>
-  <m-header></m-header>
-</view>
+<!-- 头部组件 -->
+<m-header></m-header>
+
+<!-- 轮播图 -->
+<swiper indicator-dots indicator-color="rgba(255,255,255,0.3)" indicator-active-color="#BDA066" autoplay circular previous-margin="30rpx" class="banners">
+  <swiper-item wx:for="{{ banners }}" wx:key="index">
+    <image src="{{item}}"></image>
+  </swiper-item>
+</swiper>

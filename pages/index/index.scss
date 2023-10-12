@@ -1,1 +1,12 @@
 /* pages/index/index.wxss */
+.banners {
+  margin-top: 30rpx;
+  height: 460rpx;
+  swiper-item {
+    image {
+      width: 690rpx;
+      height: 460rpx;
+      border-radius: 30rpx;
+    }
+  }
+}
