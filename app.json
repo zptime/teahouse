@@ -46,6 +46,7 @@
     ]
   },
   "usingComponents": {
-    "m-header": "components/m-header/m-header"
+    "m-header": "components/m-header/m-header",
+    "van-icon": "@vant/weapp/icon/index"
   }
 }

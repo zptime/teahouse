@@ -1,0 +1,23 @@
+<!--components/m-news-item/m-news-item.wxml-->
+<view class="news-item">
+  <view class="pic">
+    <image class="img" src="{{item.picurl}}" mode="aspectFill"></image>
+  </view>
+  <view class="info">
+    <view class="title">{{item.title}}</view>
+    <view class="desc">
+      <view class="item">
+        <van-icon name="clock-o" class="vanticon" />
+        <text>{{item.publish_date}}</text>
+      </view>
+      <view class="item">
+        <van-icon name="eye-o" class="vanticon" />
+        <text>{{item.view_count}}</text>
+      </view>
+      <view class="item">
+        <van-icon name="manager-o" class="vanticon" />
+        <text>{{item.author}}</text>
+      </view>
+    </view>
+  </view>
+</view>
