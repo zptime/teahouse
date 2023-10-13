@@ -32,3 +32,15 @@
     <view class="row">从白茶的栽培管理到茶窖存储，每一款产品都诠释着我们追求完美的品质之心，我们拥有最佳的仓储环境，全系列白茶产品，优质的客户服务，致力于打造创新发展、诚信经营的新标杆。</view>
   </view>
 </view>
+
+<!-- 品牌咨询 -->
+<view class="intro-item news">
+  <view class="title">
+    <view class="en">news</view>
+    <view class="zn">品牌资讯</view>
+    <view class="line"></view>
+  </view>
+  <view class="content">
+    <m-news-item wx:for="{{newList}}" wx:key="_id" item="{{item}}"></m-news-item>
+  </view>
+</view>

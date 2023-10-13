@@ -1,7 +1,12 @@
 // pages/index/index.js
 import {
-  getNavList
+  getNavList,
+  getNewsList
 } from "../../service/api"
+import {
+  formatNum,
+  formatTime
+} from "../../utils/util"
 
 Page({
   /**
@@ -14,7 +19,8 @@ Page({
       '/static/images/banner2.jpg',
       '/static/images/banner3.jpg'
     ],
-    navList: []
+    navList: [],
+    newList: []
   },
 
   /**
@@ -22,12 +28,28 @@ Page({
    */
   onLoad(options) {
     this.getNavData();
+    this.getNewsData();
   },
 
   getNavData() {
     getNavList().then(res => {
       this.setData({
         navList: res.data
+      })
+    })
+  },
+
+  getNewsData() {
+    getNewsList({
+      limit: 3,
+      size: 0
+    }).then(res => {
+      this.setData({
+        newList: res.data.map(o => {
+          o.view_count = formatNum(o.view_count)
+          o.publish_date = formatTime(o.publish_date, 5)
+          return o
+        })
       })
     })
   },
