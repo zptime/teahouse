@@ -44,3 +44,5 @@
     <m-news-item wx:for="{{newList}}" wx:key="_id" item="{{item}}"></m-news-item>
   </view>
 </view>
+
+<m-footer></m-footer>

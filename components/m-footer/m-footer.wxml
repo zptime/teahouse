@@ -1,0 +1,11 @@
+<!--components/m-footer/m-footer.wxml-->
+<view class="footer">
+  <view class="row">解释权归时光茶馆所有</view>
+  <view class="row">Copyright © {{year}} 版权所有</view>
+</view>
+
+<view class="customer">
+  <button class="btn" open-type="contact">1</button>
+  <image src="/static/images/kefu.png" mode="aspectFill" class="pic"/>
+  <view class="line"></view>
+</view>
