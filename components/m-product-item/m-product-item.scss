@@ -1,0 +1,28 @@
+/* components/m-product-item/m-product-item.wxss */
+.m-product-item {
+  border: 1px solid #eee;
+  width: 330rpx;
+  margin-bottom: 30rpx;
+  .img {
+    width: 100%;
+  }
+  .content {
+    padding: 30rpx 20rpx;
+  }
+  .title {
+    font-size: 32rpx;
+    color: #333;
+    border-bottom: 1px solid #efefef;
+    padding-bottom: 20rpx;
+  }
+  .intro {
+    .item {
+      margin-top: 20rpx;
+      font-size: 26rpx;
+      color: #666;
+      .desc {
+        color: #aaa;
+      }
+    }
+  }
+}

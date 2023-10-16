@@ -9,4 +9,9 @@
   }
 }
 
-.classify-tabs {}
+.classify-products {
+  margin: 50rpx 30rpx;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}

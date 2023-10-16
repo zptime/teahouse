@@ -10,7 +10,8 @@
 </van-tabs>
 
 <view class="classify-products">
-  <view wx:for="{{ productList }}"></view>
+  <m-product-item wx:for="{{ productList }}" wx:key="_id" item="{{item}}">
+  </m-product-item>
 </view>
 
 <m-footer></m-footer>

@@ -1,0 +1,16 @@
+<!--components/m-product-item/m-product-item.wxml-->
+<view class="m-product-item">
+  <image class="img" src="{{item.picpath}}" mode="widthFix"></image>
+  <view class="content">
+    <view class="title">
+      {{item.title}}
+    </view>
+    <view class="intro">
+      <view class="item"><text class="desc" space="emsp">货 号：</text>{{item.pronum}}</view>
+      <view class="item"><text class="desc" space="emsp">等 级：</text>{{item.grade}}</view>
+      <view class="item"><text class="desc" space="emsp">年 份：</text>{{item.year}}</view>
+      <view class="item"><text class="desc">净含量：</text>{{item.weight}}</view>
+      <view class="item"><text class="desc">零售价：</text>{{item.price}}</view>
+    </view>
+  </view>
+</view>

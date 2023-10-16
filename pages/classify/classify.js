@@ -4,8 +4,6 @@ import {
   getProductList
 } from "../../service/api"
 
-let navId = ""
-
 Page({
 
   /**
@@ -15,6 +13,7 @@ Page({
     active: 0,
     navId: '',
     navList: [],
+    productList: []
   },
 
   /**
@@ -31,7 +30,6 @@ Page({
       navList: res.data,
       navId: res.data[0]._id
     })
-    navId = res.data[0]._id
   },
 
   getProductList() {
@@ -41,7 +39,9 @@ Page({
       "limit": 10, // 获取多少条
       "size": 0, // 分页从多少页开始
     }).then(res => {
-      console.log("产品数据：", res.data)
+      this.setData({
+        productList: res.data
+      })
     })
   },
 
