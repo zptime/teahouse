@@ -1,2 +1,9 @@
 <!--pages/news/news.wxml-->
-<text>pages/news/news.wxml</text>
+<m-header></m-header>
+<view class="news-list">
+  <m-news-item wx:for="{{newsList}}" wx:key="_id" item="{{item}}"></m-news-item>
+  <view class="loadOut">
+    <van-loading size="24px" wx:if="{{loading}}">加载中...</van-loading>
+    <view class="noData" wx:if="{{isEmpty}}">没有更多数据了~</view>
+  </view>
+</view>
