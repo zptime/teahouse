@@ -11,7 +11,18 @@
 
 .classify-products {
   margin: 50rpx 30rpx;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  .products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .loadOut {
+    text-align: center;
+    padding: 30rpx 0;
+
+    .noData {
+      font-size: 30rpx;
+      color: #666;
+    }
+  }
 }

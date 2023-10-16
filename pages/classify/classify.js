@@ -13,7 +13,9 @@ Page({
     active: 0,
     navId: '',
     navList: [],
-    productList: []
+    productList: [],
+    loading: false,
+    isEmpty: false
   },
 
   /**
@@ -32,15 +34,22 @@ Page({
     })
   },
 
-  getProductList() {
+  getProductList(size = 0) {
+    this.setData({
+      loading: true
+    })
     getProductList({
       // "navid": "63b9600be1a35c358c18483b", //分类ID
       navid: this.data.navList[this.data.active]._id,
-      "limit": 10, // 获取多少条
-      "size": 0, // 分页从多少页开始
+      // "limit": 4, // 获取多少条
+      "size": size, // 分页从多少页开始
     }).then(res => {
+      let oldArr = this.data.productList;
+      let newArr = [...oldArr, ...res.data];
       this.setData({
-        productList: res.data
+        loading: false,
+        isEmpty: res.total === newArr.length ? true : false,
+        productList: newArr
       })
     })
   },
@@ -48,6 +57,9 @@ Page({
   onChange(evt) {
     console.log(evt)
     this.setData({
+      productList: [],
+      loading: false,
+      isEmpty: false,
       active: evt.detail.index,
       navId: this.data.navList[evt.detail.index]._id
     })
@@ -93,7 +105,8 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom() {
-
+    if (this.data.isEmpty) return
+    this.getProductList(this.data.productList.length)
   },
 
   /**
