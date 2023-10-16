@@ -22,6 +22,15 @@ Page({
    * 生命周期函数--监听页面加载
    */
   async onLoad(options) {
+    console.log(options)
+    let {
+      idx
+    } = options;
+    if (idx) {
+      this.setData({
+        active: Number(idx)
+      })
+    }
     await this.getNavData();
     this.getProductList();
   },
@@ -30,7 +39,7 @@ Page({
     let res = await getNavList();
     this.setData({
       navList: res.data,
-      navId: res.data[0]._id
+      navId: res.data[this.data.active]._id
     })
   },
 

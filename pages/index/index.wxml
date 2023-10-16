@@ -12,10 +12,10 @@
 <!-- 滚动条 -->
 <view class="scrolls">
   <scroll-view scroll-x enable-flex>
-    <view class="item" wx:for="{{navList}}" wx:key="_id">
+    <navigator open-type="reLaunch" url="/pages/classify/classify?idx={{index}}" class="item" wx:for="{{navList}}" wx:key="_id">
       <image src="{{item.icon}}" class="img"></image>
       <view class="desc">{{item.classname}}</view>
-    </view>
+    </navigator>
   </scroll-view>
 </view>
 
