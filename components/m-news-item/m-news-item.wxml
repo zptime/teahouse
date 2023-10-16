@@ -1,4 +1,4 @@
-<!--components/m-news-item/m-news-item.wxml-->
+<!-- components/m-news-item/m-news-item.wxml -->
 <view class="news-item">
   <view class="pic">
     <image class="img" src="{{item.picurl}}" mode="aspectFill"></image>

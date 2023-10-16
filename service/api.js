@@ -3,6 +3,7 @@ import {
 } from "./request"
 import navList from "../mock/navList.js"
 import newsList from "../mock/newsList.js"
+import productList from "../mock/productList.js"
 
 const isMock = true;
 
@@ -23,6 +24,17 @@ export function getNewsList(data) {
   }
   return request({
     url: "/news/get",
+    data
+  })
+}
+
+// 获取产品数据
+export function getProductList(data) {
+  if (isMock) {
+    return Promise.resolve(productList)
+  }
+  return request({
+    url: "/product/getlist",
     data
   })
 }

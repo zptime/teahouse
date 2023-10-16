@@ -1,2 +1,16 @@
-<!--pages/classify/classify.wxml-->
-<text>pages/classify/classify.wxml</text>
+<m-header></m-header>
+
+<view class="classify-banner">
+  <image class="img" src="/static/images/teaBanner.jpg" mode="aspectFill"></image>
+</view>
+
+<van-tabs active="{{active}}" class="classify-tabs" color="#BDA066" title-active-color="#BDA066" bind:change="onChange">
+  <van-tab wx:for="{{ navList }}" wx:key="_id" title="{{item.classname}}">
+  </van-tab>
+</van-tabs>
+
+<view class="classify-products">
+  <view wx:for="{{ productList }}"></view>
+</view>
+
+<m-footer></m-footer>
