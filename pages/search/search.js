@@ -1,4 +1,10 @@
 // pages/search/search.js
+import {
+  getProductList
+} from "../../service/api"
+
+const HISTORY_NAME = 'historyList';
+
 Page({
 
   /**
@@ -7,14 +13,20 @@ Page({
   data: {
     value: '',
     historyList: [],
-    productList: []
+    productList: [],
+    isEmpty: false
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-
+    let list = wx.getStorageSync(HISTORY_NAME) || []
+    if (list && list.length) {
+      this.setData({
+        historyList: list
+      })
+    }
   },
 
   onChange(e) {
@@ -24,10 +36,51 @@ Page({
   },
   onSearch() {
     console.log('onSearch：' + this.data.value);
+    let list = this.data.historyList || [];
+    list.unshift(this.data.value);
+    list = [...new Set(list)];
+    this.setData({
+      historyList: list
+    })
+    wx.setStorageSync(HISTORY_NAME, list)
+    this.getData()
+  },
+  onClear() {
+    this.setData({
+      value: '',
+      productList: [],
+      isEmpty: false
+    })
   },
 
   handleRemove() {
+    this.setData({
+      value: [],
+      historyList: []
+    })
+    wx.setStorageSync(HISTORY_NAME, [])
+  },
 
+  handleHisItem(evt) {
+    console.log(evt);
+    this.setData({
+      value: evt.currentTarget.dataset.value
+    });
+    this.getData();
+  },
+
+  getData() {
+    if (!this.data.value) return;
+
+    getProductList({
+      limit: 10,
+      "keyword": this.data.value
+    }).then(res => {
+      this.setData({
+        isEmpty: res.data.length === 0,
+        productList: res.data
+      })
+    })
   },
 
   /**

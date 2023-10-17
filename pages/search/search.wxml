@@ -1,9 +1,9 @@
 <!--pages/search/search.wxml-->
-<van-search value="{{ value }}" shape="round" background="#BDA066" placeholder="请输入产品名称" use-action-slot bind:change="onChange" bind:search="onSearch">
+<van-search value="{{ value }}" shape="round" background="#BDA066" placeholder="请输入产品名称" use-action-slot bind:change="onChange" bind:search="onSearch" bind:clear="onClear">
   <view slot="action" bind:tap="onSearch" class="search-btn">搜索</view>
 </van-search>
 
-<view class="history">
+<view class="history" wx:if="{{!productList.length && historyList.length}}">
   <view class="title">
     <text class="left">搜索历史</text>
     <view class="right" bind:tap="handleRemove">
@@ -12,6 +12,14 @@
     </view>
   </view>
   <view class="list">
-    <view class="item" wx:for="{{ historyList }}" wx:key="index"></view>
+    <view class="item" wx:for="{{ historyList }}" wx:key="index" data-value="{{item}}" bind:tap="handleHisItem">{{item}}</view>
   </view>
 </view>
+
+<view class="products" wx:if="{{productList.length}}">
+  <view class="total">共检索出<text class="num">{{productList.length}}</text>款产品</view>
+  <m-product-item wx:for="{{ productList }}" wx:key="_id" item="{{item}}">
+  </m-product-item>
+</view>
+
+<van-empty wx:if="{{isEmpty}}" description="没有搜索结果" />

@@ -7,7 +7,7 @@ import newsDetail from "../mock/newsDetail"
 import productList from "../mock/productList.js"
 import productDetail from "../mock/productDetail"
 
-const isMock = true;
+const isMock = false;
 
 // 获取首页导航
 export function getNavList() {
