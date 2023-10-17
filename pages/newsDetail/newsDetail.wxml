@@ -1,4 +1,4 @@
-<!--pages/newsDetail/newsDetail.wxml-->
+<!-- pages/newsDetail/newsDetail.wxml -->
 <view class="news-detail">
   <view class="title">{{detail.title}}</view>
   <view class="info">
@@ -10,9 +10,7 @@
     <view class="right">
       <van-icon class="icon" name="share-o" size="18" />
       分享
-      <button open-type="share" class="share" size="mini">
-        享
-      </button>
+      <button open-type="share" class="share" size="mini">分享</button>
     </view>
   </view>
   <view class="content">
