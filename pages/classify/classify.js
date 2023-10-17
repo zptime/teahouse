@@ -60,6 +60,10 @@ Page({
         isEmpty: res.total === newArr.length ? true : false,
         productList: newArr
       })
+    }).catch(() => {
+      this.setData({
+        loading: false
+      })
     })
   },
 

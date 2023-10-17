@@ -15,7 +15,7 @@
     </m-product-item>
   </view>
   <view class="loadOut">
-    <van-loading size="24px" wx:if="{{loading}}">加载中...</van-loading>
+    <!-- <van-loading size="24px" wx:if="{{loading}}">加载中...</van-loading> -->
     <view class="noData" wx:if="{{isEmpty}}">没有更多数据了~</view>
   </view>
 </view>
