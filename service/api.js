@@ -5,6 +5,7 @@ import navList from "../mock/navList.js"
 import newsList from "../mock/newsList.js"
 import newsDetail from "../mock/newsDetail"
 import productList from "../mock/productList.js"
+import productDetail from "../mock/productDetail"
 
 const isMock = true;
 
@@ -50,5 +51,18 @@ export function getProductList(data) {
   return request({
     url: "/product/getlist",
     data
+  })
+}
+
+// 获取产品详情
+export function queryProductDetail(id) {
+  if (isMock) {
+    return Promise.resolve(productDetail)
+  }
+  return request({
+    url: "/product/detail",
+    data: {
+      id
+    }
   })
 }

@@ -1,6 +1,8 @@
 // components/m-product-item/m-product-item.js
 Component({
-
+  options: {
+    styleIsolation: "apply-shared"
+  },
   /**
    * 组件的属性列表
    */

@@ -4,7 +4,8 @@
     "pages/logs/logs",
     "pages/classify/classify",
     "pages/news/news",
-    "pages/newsDetail/newsDetail"
+    "pages/newsDetail/newsDetail",
+    "pages/productDetail/productDetail"
   ],
   "window": {
     "navigationBarTitleText": "时光茶馆",

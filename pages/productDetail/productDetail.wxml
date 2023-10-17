@@ -1,0 +1,5 @@
+<!-- pages/productDetail/productDetail.wxml -->
+<m-header></m-header>
+<m-product-item class="product-detail" item="{{detail}}">
+</m-product-item>
+<m-footer></m-footer>
