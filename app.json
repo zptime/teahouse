@@ -3,7 +3,8 @@
     "pages/index/index",
     "pages/logs/logs",
     "pages/classify/classify",
-    "pages/news/news"
+    "pages/news/news",
+    "pages/newsDetail/newsDetail"
   ],
   "window": {
     "navigationBarTitleText": "时光茶馆",
@@ -25,7 +26,8 @@
   "tabBar": {
     "color": "#4C4D4E",
     "selectedColor": "#BDA066",
-    "list": [{
+    "list": [
+      {
         "text": "首页",
         "pagePath": "pages/index/index",
         "iconPath": "/static/images/home.png",

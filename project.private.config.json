@@ -9,6 +9,13 @@
     "miniprogram": {
       "list": [
         {
+          "name": "新闻详情",
+          "pathName": "pages/newsDetail/newsDetail",
+          "query": "id=63c38bc7e1a35ce43a26182c",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
           "name": "资讯页",
           "pathName": "pages/news/news",
           "query": "",

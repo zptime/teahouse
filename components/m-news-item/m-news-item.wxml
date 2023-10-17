@@ -1,5 +1,5 @@
 <!-- components/m-news-item/m-news-item.wxml -->
-<view class="news-item">
+<navigator class="news-item" url="/pages/newsDetail/newsDetail?id={{item._id}}">
   <view class="pic">
     <image class="img" src="{{item.picurl}}" mode="aspectFill"></image>
   </view>
@@ -20,4 +20,4 @@
       </view>
     </view>
   </view>
-</view>
+</navigator>

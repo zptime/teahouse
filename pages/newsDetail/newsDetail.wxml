@@ -1,0 +1,25 @@
+<!--pages/newsDetail/newsDetail.wxml-->
+<view class="news-detail">
+  <view class="title">{{detail.title}}</view>
+  <view class="info">
+    <view class="left">
+      {{detail.publish_date}}
+      {{detail.author}}
+      {{detail.view_count}}阅读
+    </view>
+    <view class="right">
+      <van-icon class="icon" name="share-o" size="18" />
+      分享
+      <button open-type="share" class="share" size="mini">
+        享
+      </button>
+    </view>
+  </view>
+  <view class="content">
+    <rich-text nodes="{{detail.content}}"></rich-text>
+  </view>
+  <view class="copyright">
+    <view class="top">免责声明</view>
+    <view>本文来自网络新闻创作者，不代表本小程序的观点和立场，如有侵权请联系客服进行删除。</view>
+  </view>
+</view>
