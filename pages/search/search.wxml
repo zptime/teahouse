@@ -1,0 +1,17 @@
+<!--pages/search/search.wxml-->
+<van-search value="{{ value }}" shape="round" background="#BDA066" placeholder="请输入产品名称" use-action-slot bind:change="onChange" bind:search="onSearch">
+  <view slot="action" bind:tap="onSearch" class="search-btn">搜索</view>
+</van-search>
+
+<view class="history">
+  <view class="title">
+    <text class="left">搜索历史</text>
+    <view class="right" bind:tap="handleRemove">
+      <van-icon name="delete-o" size="16" />
+      <text class="desc">清空历史</text>
+    </view>
+  </view>
+  <view class="list">
+    <view class="item" wx:for="{{ historyList }}" wx:key="index"></view>
+  </view>
+</view>

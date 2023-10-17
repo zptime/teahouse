@@ -9,6 +9,13 @@
     "miniprogram": {
       "list": [
         {
+          "name": "搜索页",
+          "pathName": "pages/search/search",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
           "name": "产品详情",
           "pathName": "pages/productDetail/productDetail",
           "query": "id=28ee4e3e6050598b0af006d25246ec3f",

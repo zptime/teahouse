@@ -1,7 +1,7 @@
 /**app.wxss**/
 page {
   --themeColor: #BDA066;
-  --globalColor: #1a1b1c;
+  --globalColor: #141414;
   --focusColor: #4c4d4e;
   --descColor: #7e8081;
   --greyColor:#8e8e8e;

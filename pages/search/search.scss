@@ -1,0 +1,25 @@
+/* pages/search/search.wxss */
+.search-btn {
+  color: #fff;
+  margin: 0 30rpx;
+}
+
+.history {
+  margin: 30rpx;
+  font-size: 30rpx;
+  color: #666;
+
+  .title,
+  .right {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .right {
+    color: #999;
+    .desc {
+      margin-left: 5rpx;
+    }
+  }
+}
