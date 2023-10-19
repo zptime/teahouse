@@ -298,7 +298,3 @@ at (@vant/weapp/field/index.appservice.js:1:2269)
 第一次运行时，先 `npm install` 一下，安装依赖。
 
 然后使用小程序打开项目，编译运行。
-
-## 5. 体验小程序
-
-![时光茶馆](https://github.com/zptime/teahouse/blob/master/static/images/qrcode.jpg)
