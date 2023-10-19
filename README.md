@@ -273,6 +273,32 @@ Component({
 
 解决：设置 `scroll-view` 的 `scrollWithAnimation` 属性为 false
 
+### 3.9 van-search 真机加载白屏
+
+报错信息：
+
+SystemError (jsEnginScriptError)
+X(...).bem is not a function
+TypeError: X(...).bem is not a function
+at (appservice.app.js:158:20638)
+at (common.app.js:1:30767)
+at Object.C (appservice.app.js:158:20429)
+at (@vant/weapp/field/index.appservice.js:1:2805)
+at t.handleChildrenCreation (common.app.js:1:30528)
+at (common.app.js:1:31868)
+at (@vant/weapp/field/index.appservice.js:1:2711)
+at t.handleChildrenCreation (common.app.js:1:30528)
+at (common.app.js:1:30777)
+at (@vant/weapp/field/index.appservice.js:1:2269)
+
+解决：查看官方 issue (https://github.com/youzan/vant-weapp/issues/5572)[https://github.com/youzan/vant-weapp/issues/5572]
+
 ## 4. 运行项目
 
-第一次运行时，先 `npm install` 一下
+第一次运行时，先 `npm install` 一下，安装依赖。
+
+然后使用小程序打开项目，编译运行。
+
+## 5. 体验小程序
+
+![时光茶馆](https://github.com/zptime/teahouse/blob/master/static/images/qrcode.png)
