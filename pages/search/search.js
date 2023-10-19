@@ -21,7 +21,8 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-    let list = wx.getStorageSync(HISTORY_NAME) || []
+    let list = wx.getStorageSync(HISTORY_NAME) || [];
+    console.log(list);
     if (list && list.length) {
       this.setData({
         historyList: list
