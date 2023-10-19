@@ -301,4 +301,4 @@ at (@vant/weapp/field/index.appservice.js:1:2269)
 
 ## 5. 体验小程序
 
-![时光茶馆](https://github.com/zptime/teahouse/blob/master/static/images/qrcode.png)
+![时光茶馆](https://github.com/zptime/teahouse/blob/master/static/images/qrcode.jpg)
